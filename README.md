@@ -12,7 +12,7 @@ So I might as well share my stuff :)
 2. Clone this repo
 3. Add this to your imports:
 ```
-  (import /path/the/cloned/repo/mkRouter.nix {
+  (import "${fetchGit { ref = "master"; url = https://github.com/stanipintjuk/nixos-router; }}/mkRouter.nix" {
     internalInterface = "enp4s0"; # or w/e ethernet interface you want to connect your raspberry pi to
     externalInterface = "wlp0s20f0u8"; # or w/e interface you get your internet connection to your pc
   })
